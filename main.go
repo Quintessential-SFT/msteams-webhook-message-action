@@ -23,8 +23,7 @@ func sendTheMessage() error {
 	fmt.Println(os.Getenv("TITLE"))
 	mstClient := goteamsnotify.NewClient()
 
-	webhookURL :=
-		"https://outlook.office.com/webhook/" + os.Getenv("WEBHOOK_URL")
+	webhookURL := os.Getenv("WEBHOOK_URL")
 
 	msgCard := goteamsnotify.NewMessageCard()
 	msgCard.Title = os.Getenv("TITLE")
